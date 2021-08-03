@@ -1,1 +1,40 @@
+// CSS Reset, comment out if not required or using a different module
+@import '~minireset.css/minireset';
 /* You can add global styles to this file, and also import other style files */
+
+@import "~igniteui-angular/lib/core/styles/themes/index";
+
+@import "~igniteui-angular/lib/core/styles/base/utilities/index";
+
+// Uncomment the following lines if you want to add a custom palette:
+// $primary: #731963 !default;
+// $secondary: #ce5712 !default;
+// $app-palette: igx-palette($primary, $secondary);
+
+/* autoprefixer grid: on */
+
+@include igx-core();
+@include igx-fluent-dark-theme($dark-fluent-excel-palette);
+
+.igx-grid__td span {white-space:nowrap;
+text-overflow: ellipsis;
+overflow: hidden;}
+
+body {
+    background-image: url('assets/spacex-bg.jpg');
+    background-color: #6c97cf !important;
+}
+ h1{
+    font-family:Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+    font-size: 2.5rem;
+    font-weight: 300;
+ }
+ h3{
+     font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+ }
+ .presskit-error{
+    color: red;
+    font-weight:700;
+ }
+/* Importing Bootstrap SCSS file. */
+@import '~bootstrap/scss/bootstrap';
